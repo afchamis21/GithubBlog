@@ -27,29 +27,8 @@ body {
 a {
   text-decoration: none;
 
-  color: ${(props) => props.theme.blue};
   font-size: 0.75rem;
   gap: 0.5rem;
-
-  width: fit-content;
-  height: fit-content;
-  position: relative;
-
-  &::after {
-    content: '';
-    width: 0;
-    height: 1px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background:  ${(props) => props.theme.blue};
-
-    transition: width 0.2s
-  }
-
-  &:hover::after{
-    width:100%;
-  }
 }
 
 `

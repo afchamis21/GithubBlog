@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const HeaderContainer = styled.header`
   height: 18.5rem;
   width: 100%;
+  min-width: 56rem;
   background: ${(props) => props.theme['gray-700']};
 
   display: flex;

@@ -1,5 +1,6 @@
 import { ArrowSquareOut, Buildings, GithubLogo, Users } from 'phosphor-react'
 import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { GithubDataContext } from '../../contexts/GithubUserContext'
 import {
   CardFooter,
@@ -14,11 +15,13 @@ export function UserCard() {
 
   return (
     <UserCardContainer>
-      <ProfileImage src={user.avatarUrl} />
+      <Link to="/">
+        <ProfileImage src={user.avatarUrl} />
+      </Link>
       <UserInfo>
         <CardHeader>
           <h2>{user.name}</h2>
-          <a href={user.url}>
+          <a href={user.url} target="_blank" rel="noreferrer">
             GITHUB <ArrowSquareOut size={12} />
           </a>
         </CardHeader>

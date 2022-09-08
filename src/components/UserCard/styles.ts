@@ -6,7 +6,7 @@ export const UserCardContainer = styled.div`
   padding: 2rem 2.5rem 2rem 2rem;
 
   margin: -5.25rem auto 0;
-  width: 54rem;
+  max-width: 54rem;
 
   background: ${(props) => props.theme['gray-600']};
   box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.2);
@@ -32,6 +32,34 @@ export const UserInfo = styled.div`
 export const CardHeader = styled.div`
   display: flex;
   justify-content: space-between;
+
+  a {
+    text-decoration: none;
+
+    color: ${(props) => props.theme.blue};
+    font-size: 0.75rem;
+    gap: 0.5rem;
+
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 0;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: ${(props) => props.theme.blue};
+
+      transition: width 0.2s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
 `
 
 export const CardFooter = styled.div`
