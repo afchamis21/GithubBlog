@@ -22,6 +22,8 @@ export function Post() {
 
   const navigate = useNavigate()
 
+  // This ternary was made to prevent an error on the formattedDate and alow time
+  // for the redirect
   const createdAt = post?.createdAt ?? new Date()
 
   useEffect(() => {
